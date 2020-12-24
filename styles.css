@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+#app {
+  --grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: var(--grid-gap);
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+
+}
+
+.box:nth-child(odd):hover{
+  background-color: blue;
+  transform: translateY(-10px);
+  transition: 2s;
+}
+.box:nth-child(even):hover {
+  transform: rotate(180deg);
+  transition: 2s;
+  background-color: purple;
+}
